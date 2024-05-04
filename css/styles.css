@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-background-primary: #060ea8;
+  --color-text-primary: #000000; 
+  --color-text-secondary: #797979; 
+  --color-text-without-focus: #c6c6c6;
+  --color-text-button: #ffffff;
+}
+
+body { font-family: "Poppins", sans-serif; }
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  padding-block: 1.8rem;
+  background-color: var(--color-background-primary);
+}
+
+.header__logo {
+  display: block;
+  width: 150px;
+  margin-inline: auto;
+}
+
+/* NAV */
+.nav__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin-block: 1.5rem;
+}
+
+.nav__form {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  padding-inline: 1rem;
+  font-size: .9rem;
+  border: 1px solid var(--color-text-without-focus);
+  border-radius: .65rem;
+}
+
+.nav__form:has(.nav__input:focus) { border-color: var(--color-background-primary); }
+
+.nav__input {
+  flex-grow: 1;
+  padding-block: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Para ocultar el icono de x en el input search */
+.nav__input::-webkit-search-cancel-button {
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari y Chrome */
+}
+
+.nav__input::placeholder {
+  font-weight: 500;
+  color: var(--color-text-without-focus);
+}
+
+.nav__label i { 
+  color: var(--color-text-without-focus);
+  cursor: pointer; 
+}
+
+.nav__input:not(:placeholder-shown) + .nav__label i { color: var(--color-text-primary); }
+
+.nav__label input[type="submit"] { display: none; }
+
+.nav__buttons {
+  display: flex;
+  gap: .75rem;
+  overflow: scroll;
+  scrollbar-width: none; /* Soporte para Firefox - oculta la barra de desplazamiento */
+}
+
+/* Oculta la barra de desplazamiento en navegadores Webkit */
+.nav__buttons::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.nav__button {
+  padding: 1rem 1.5rem;
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--color-text-without-focus);
+  background-color: var(--color-text-button);
+  border: 1px solid var(--color-text-without-focus);
+  border-radius: .65rem;
+  transition: color .3s, background-color .3s, border-color .3s;
+
+  &:hover,
+  &:focus {
+    color: var(--color-background-primary);
+    border-color: var(--color-background-primary);
+  }
+}
+
+.nav__button--selected {
+  color: var(--color-text-button);
+  background-color: var(--color-background-primary);
+  border-color: var(--color-background-primary);
+
+  &:hover,
+  &:focus {
+    color: var(--color-text-button);
+    border-color: var(--color-background-primary);
+  }
+}
