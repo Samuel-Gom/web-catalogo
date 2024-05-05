@@ -6,6 +6,7 @@
 
 :root {
   --color-background-primary: #060ea8;
+  --color-background-secondary: #00ffff;
   --color-text-primary: #000000; 
   --color-text-secondary: #797979; 
   --color-text-without-focus: #c6c6c6;
@@ -25,6 +26,49 @@ button {
   width: 90%;
   max-width: 1200px;
   margin-inline: auto;
+}
+
+/* BUTTON CART */
+.cart {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-text-button);
+  background-color: var(--color-background-primary);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: color .3s, background-color .3s, border-color .3s, transform .3s;
+
+  &:hover,
+  &:focus {
+    color: var(--color-background-primary);
+    background-color: var(--color-text-button);
+    border-color: var(--color-background-primary);
+    transform: scale(1.1);
+  }
+}
+
+.cart i { font-size: 1.25rem; }
+
+.cart-count {
+  position: absolute;
+  top: .4rem;
+  right: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  font-size: .7rem;
+  font-weight: 600;
+  color: var(--color-text-button);
+  background-color: var(--color-background-secondary);
+  border-radius: 50%;
 }
 
 /* HEADER */
@@ -223,6 +267,22 @@ button {
 }
 
 @media (width >= 768px) {
+  /* BUTTON CART */
+.cart {
+  width: 4rem;
+  height: 4rem;
+}
+
+.cart i { font-size: 1.5rem; }
+
+.cart-count {
+  top: .6rem;
+  right: .6rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: .9rem;
+}
+
   /* HEADER */
   .header { 
     margin-bottom: 2rem;
