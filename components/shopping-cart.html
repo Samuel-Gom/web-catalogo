@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <section class="section-shop-cart">
+    <section class="shop-cart container">
+      <button class="shop-cart__close">
+        <i class="bi bi-x"></i>
+      </button>
+      <p class="shop-cart__title">Carrito de Compras</p>
+      <div class="shop-cart__items">
+        <article class="item">
+          <figure class="item__figure">
+            <img class="item__img" src="../assets/img/zapatillas-negras.jpg" alt="Zapatillas Adidas Unisex">
+          </figure>
+          <div class="item__content">
+            <p class="item__name" title="Zapatillas Adidas Unisex">Zapatillas Adidas Unisex</p>
+            <span class="item__price">Precio Unit. S/ 220.00</span>
+            <div class="item__buttons">
+              <div class="item__counter">
+                <button class="item__add">
+                  <i class="bi bi-plus"></i>
+                </button>
+                <span class="item__number">2</span>
+                <button class="item__sub">
+                  <i class="bi bi-dash"></i>
+                </button>
+              </div>
+              <button class="item__trash">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="item">
+          <figure class="item__figure">
+            <img class="item__img" src="../assets/img/zapatillas-negras.jpg" alt="Zapatillas Adidas Unisex">
+          </figure>
+          <div class="item__content">
+            <p class="item__name" title="Zapatillas Adidas Unisex">Zapatillas Adidas Unisex</p>
+            <span class="item__price">Precio Unit. S/ 220.00</span>
+            <div class="item__buttons">
+              <div class="item__counter">
+                <button class="item__add">
+                  <i class="bi bi-plus"></i>
+                </button>
+                <span class="item__number">2</span>
+                <button class="item__sub">
+                  <i class="bi bi-dash"></i>
+                </button>
+              </div>
+              <button class="item__trash">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="item">
+          <figure class="item__figure">
+            <img class="item__img" src="../assets/img/zapatillas-negras.jpg" alt="Zapatillas Adidas Unisex">
+          </figure>
+          <div class="item__content">
+            <p class="item__name" title="Zapatillas Adidas Unisex">Zapatillas Adidas Unisex</p>
+            <span class="item__price">Precio Unit. S/ 220.00</span>
+            <div class="item__buttons">
+              <div class="item__counter">
+                <button class="item__add">
+                  <i class="bi bi-plus"></i>
+                </button>
+                <span class="item__number">2</span>
+                <button class="item__sub">
+                  <i class="bi bi-dash"></i>
+                </button>
+              </div>
+              <button class="item__trash">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="shop-cart__total">Total: S/ 440.00</p>
+      <form class="shop-cart__order" action="" method="get">
+        <input class="shop-cart__input" type="text" placeholder="Ingresa tu Nombre">
+        <div class="shop-cart__method">
+          <p class="shop-cart__method-text">Elige como pagar:</p>
+          <div class="shop-cart__buttons">
+            <button class="shop-cart__button" type="button">Yape</button>
+            <button class="shop-cart__button shop-cart__button--selected" type="button">Efectivo</button>
+          </div>
+        </div>
+        <input class="shop-cart__input shop-cart__input--submit" type="submit" value="Confirmar pedido">
+      </form>
+    </section>
+  </section>
+</body>
+</html>
